@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="p1.css">
+    <script src="https://kit.fontawesome.com/6327027841.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="box1">
+            <div class="square"></div>
+        </div>
+        <div class="box2">
+            <h4>Menu</h4>
+            <h5>Homepage</h5>
+            <h5>Portfolio</h5>
+            <h5>Fashion Week -©2025</h5>
+            <h5>News/Articles</h5>
+            <h5>Contact</h5>
+        </div>
+        <div class="box3">
+            <video autoplay loop muted src="./fshn.mp4"></video>
+        </div>
+        <div class="box4">
+            <h1>Select</h1>
+            <h1>Fashion</h1>
+            <h1>Mod. 05-</h1>
+            <h1>Scene</h1>
+        </div>
+        <div class="box5">
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing necessitatibus.</p>
+            <p> Possimus nostrum corporis distinctio facere eos totam.</p>
+            <p>Enim voluptatibus facere cupiditate accusamus!</p>
+        </div>
+        <div class="circle">
+               <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        
+    </div>
+    <!-- GSAP Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    gsap.from(".main", {
+      y: "-100%",      // move from top
+      duration: 2,   // 1.5 seconds
+      ease: "power3.out"
+    });
+   gsap.to(".circle", {
+    y: -50,
+    delay:1.5,
+    duration: 0.8,
+    yoyo: true,
+    repeat: 1,
+    ease: "power1.inOut"
+  });
+  gsap.to(".box4 h1:nth-child(2n)",{
+    x:50,
+    duration: 1.9,
+    ease: "power2.out",
+  });
+  gsap.to(".box4 h1:nth-child(2n+1)",{
+    x:-50,
+    duration: 1.9,
+    ease: "power2.out",
+  });
+  </script>
+</body>
+</html>
